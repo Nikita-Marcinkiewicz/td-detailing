@@ -18,7 +18,7 @@
   --ink:#06122B;
   --white:#fff; --muted:#93A5BE;
   --line:rgba(255,255,255,.10);
-  --tg:#229ED9; --wa:#25D366; --star:#FFC845; --star-empty:#3A4A6E; --yandex:#FC3F1D;
+  --tg:#229ED9; --wa:#25D366; --star:#FFC845; --star-empty:#3A4A6E; --yandex:#FC3F1D; --vk:#0077FF;
   --r-xl:48px; --r-lg:28px;
   --ask-radius:160px 44px 44px 44px;
   --font-head:'Inter Tight',sans-serif; --font-body:'Inter',sans-serif;
@@ -68,6 +68,7 @@ h1,h2{font-family:var(--font-head)}
 .btn-icon{width:46px;height:46px;border-radius:50%;background:#1B2A4A;display:inline-flex;align-items:center;justify-content:center;transition:.3s;flex:none}
 .btn-icon:hover{background:var(--cyan)}
 .btn-icon svg{width:20px;height:20px;fill:#fff}
+.btn-icon svg.vk{width:24px;height:24px}
 .btn-icon:hover svg{fill:var(--ink)}
 
 header{position:fixed;inset:0 0 auto 0;z-index:100;transition:.4s}
@@ -95,13 +96,12 @@ nav a:hover,nav a.active{color:var(--cyan)}
 .ask-card{background:#fff;color:var(--navy);border-radius:var(--ask-radius);padding:64px 36px 30px 48px;position:relative;overflow:hidden}
 .ask-card h3{font-size:30px;font-weight:800;line-height:1.05;text-transform:uppercase;font-family:var(--font-head)}
 .ask-card .who{color:#8CA0BC;font-size:15px;margin-top:10px;line-height:1.3}
-.ask-card .socials{display:flex;gap:14px;margin-top:22px}
+.ask-card .socials{display:flex;gap:14px;margin-top:22px;position:relative;z-index:2}
 .soc{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.3s;flex:none}
 .soc:hover{transform:scale(1.12)}
 .soc svg{width:26px;height:26px;fill:#fff}
 .soc.tg{background:var(--tg)} .soc.wa{background:var(--wa)}
-.ask-card .master{position:absolute;right:0;bottom:0;width:170px;border-radius:44px 0 0 0;
-  -webkit-mask-image:linear-gradient(180deg,#000 85%,transparent 100%);mask-image:linear-gradient(180deg,#000 85%,transparent 100%)}
+.ask-card .master{position:absolute;right:10px;bottom:0;height:190px;width:auto;max-width:54%;object-fit:contain;object-position:bottom right}
 .hero-sub{margin-top:56px;font-size:24px;font-weight:800;line-height:1.15;text-transform:uppercase;font-family:var(--font-head)}
 .hero-sub + .btn{margin-top:28px;width:100%}
 .hero-reels{position:absolute;right:40px;top:110px;width:305px;display:flex;flex-direction:column;gap:26px;z-index:4}
@@ -314,12 +314,14 @@ footer{padding:90px 0 30px}
   .logo{width:42px;height:42px}
   .btn-cyan{padding:13px 18px;font-size:11px}
   .btn-icon{width:38px;height:38px}
+  .btn-icon svg.vk{width:20px;height:20px}
   .h1{font-size:clamp(38px,11vw,64px)}
   .hero{padding:120px 0 50px;min-height:auto}
   .hero-car{width:94vw}
   .hero-sub{font-size:19px}
   .ask-card{padding:48px 24px 24px 30px}
   .ask-card h3{font-size:26px}
+  .ask-card .master{height:150px}
   .services-grid{columns:1;margin-top:44px}
   .service-card{margin-bottom:56px}
   .service-title{margin-top:-24px;font-size:30px}
@@ -369,6 +371,7 @@ footer{padding:90px 0 30px}
     <div class="header-right">
       <a class="btn-icon" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.9.3-.5.2-.8.4-1.1.7-.3.3-.6.7-.7 1.1-.1.4-.3.8-.3 1.9-.1 1.2-.1 1.6-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.9.2.5.4.8.7 1.1.3.3.7.6 1.1.7.4.1.8.3 1.9.3 1.2.1 1.6.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.9-.3.5-.2.8-.4 1.1-.7.3-.3.6-.7.7-1.1.1-.4.3-.8.3-1.9.1-1.2.1-1.6.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.7-.6-1.1-.7-.4-.1-.8-.3-1.9-.3-1.2-.1-1.6-.1-4.8-.1zm0 3.1a5 5 0 110 10 5 5 0 010-10zm0 1.8a3.2 3.2 0 100 6.4 3.2 3.2 0 000-6.4zm5.2-3.1a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg></a>
       <a class="btn-icon" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
+      <a class="btn-icon" href="#" aria-label="ВКонтакте"><svg class="vk" viewBox="0 0 24 24"><path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974h-3.255c-.492 0-.787.16-.787.516 0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.376 2.708z"/></svg></a>
       <a href="#cta" class="btn btn-cyan">Записаться на детейлинг</a>
     </div>
   </div>
@@ -377,7 +380,6 @@ footer{padding:90px 0 30px}
 <main>
 <section class="hero" id="hero">
   <h1 class="h1" data-reveal>Студия детейлинга
-    <span class="logo-badge" style="font-size:.82em"><svg viewBox="0 0 48 48"><rect width="48" height="48" rx="13" fill="#EDF2F7"/><path fill="#0D1B3E" fill-rule="evenodd" d="M8 16h13v5.6h-3.9V38h-5.2V21.6H8zM23 16h7.2c6.3 0 9.8 4.4 9.8 11s-3.5 11-9.8 11H23zm5.2 5v12h2c3.1 0 4.8-2.2 4.8-6s-1.7-6-4.8-6z"/><path fill="#29B6F6" d="M39.5 5c.8 3.2 1.8 4.2 5 5-3.2.8-4.2 1.8-5 5-.8-3.2-1.8-4.2-5-5 3.2-.8 4.2-1.8 5-5z"/></svg></span>
     <em>в Тюмени</em>
   </h1>
   <img class="hero-car" src="img/hero-car.jpg" alt="Синий спорткар">
@@ -733,6 +735,7 @@ footer{padding:90px 0 30px}
         <div class="f-soc">
           <a class="btn-icon" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.9a5 5 0 110 10 5 5 0 010-10zm5.2-3.1a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg></a>
           <a class="btn-icon" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
+          <a class="btn-icon" href="#" aria-label="ВКонтакте"><svg class="vk" viewBox="0 0 24 24"><path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974h-3.255c-.492 0-.787.16-.787.516 0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.376 2.708z"/></svg></a>
         </div>
         <a class="f-link" href="#calc">Получить консультацию <span class="arr">↗</span></a>
         <a class="f-link" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener">Написать нам в Telegram <span class="arr">↗</span></a>
