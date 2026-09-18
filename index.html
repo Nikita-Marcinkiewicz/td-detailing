@@ -3,8 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TD Detailing — студия детейлинга в Тюмени</title>
+<title>TD Detailing — студия детейлинга в Тюмени | Полировка, керамика, химчистка</title>
+<meta name="description" content="TD Detailing — студия детейлинга в Тюмени. Полировка кузова, керамика, твердый воск, химчистка салона, антидождь, оклейка оптики. Ежедневно с 9:00 до 21:00. Запись: +7 (950) 494-11-22">
+<meta name="keywords" content="детейлинг Тюмень, полировка кузова Тюмень, керамика авто Тюмень, химчистка салона Тюмень, TD Detailing">
+<link rel="canonical" href="https://nikita-marcinkiewicz.github.io/td-detailing/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TD Detailing — студия детейлинга в Тюмени">
+<meta property="og:description" content="Полировка, керамика, твердый воск, химчистка салона, антидождь, оклейка оптики. Результат виден сразу. Ежедневно 9:00–21:00.">
+<meta property="og:image" content="img/og-cover.jpg">
+<meta property="og:url" content="https://nikita-marcinkiewicz.github.io/td-detailing/">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TD Detailing — студия детейлинга в Тюмени">
+<meta name="twitter:description" content="Полировка, керамика, химчистка, оклейка оптики. Ежедневно 9:00–21:00.">
+<meta name="twitter:image" content="img/og-cover.jpg">
+<meta name="theme-color" content="#060B15">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%23EDF2F7'/%3E%3Cpath fill='%230D1B3E' fill-rule='evenodd' d='M8 16h13v5.6h-3.9V38h-5.2V21.6H8zM23 16h7.2c6.3 0 9.8 4.4 9.8 11s-3.5 11-9.8 11H23zm5.2 5v12h2c3.1 0 4.8-2.2 4.8-6s-1.7-6-4.8-6z'/%3E%3Cpath fill='%2329B6F6' d='M39.5 5c.8 3.2 1.8 4.2 5 5-3.2.8-4.2 1.8-5 5-.8-3.2-1.8-4.2-5-5 3.2-.8 4.2-1.8 5-5z'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDetailing",
+  "name": "TD Detailing",
+  "description": "Студия детейлинга в Тюмени: полировка кузова, керамика, твердый воск, химчистка салона, антидождь, оклейка оптики.",
+  "url": "https://nikita-marcinkiewicz.github.io/td-detailing/",
+  "telephone": "+7 950 494-11-22",
+  "image": "img/og-cover.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Тюмень",
+    "streetAddress": "ул. Ветеранов Труда, 21, стр. 2"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00",
+    "closes": "21:00"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Inter+Tight:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -41,6 +78,15 @@ body{
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* ===== Focus-состояния (доступность) ===== */
+a:focus-visible,button:focus-visible,input:focus-visible,label:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.btn:focus-visible,.btn-icon:focus-visible,.soc:focus-visible{outline-offset:4px;border-radius:999px}
+.agree:focus-within .box{outline:2px solid var(--cyan);outline-offset:3px}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:2000;background:var(--cyan);color:var(--ink);padding:12px 22px;border-radius:0 0 14px 0;font-weight:700}
+.skip-link:focus{left:0}
+
 .container{max-width:1440px;margin:0 auto;padding:0 40px}
 section{position:relative}
 
@@ -71,17 +117,44 @@ h1,h2{font-family:var(--font-head)}
 .btn-icon svg.vk{width:24px;height:24px}
 .btn-icon:hover svg{fill:var(--ink)}
 
+/* ===== Шапка ===== */
 header{position:fixed;inset:0 0 auto 0;z-index:100;transition:.4s}
 header.scrolled{background:rgba(6,11,21,.8);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
 .header-in{max-width:1760px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;gap:44px}
 .logo{width:52px;height:52px;border-radius:14px;flex:none;transition:.3s}
 .logo:hover{transform:rotate(-6deg) scale(1.06)}
 nav{display:flex;gap:36px;font-size:14px;font-weight:600;letter-spacing:.04em}
-nav a{color:#fff;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:7px}
+nav a{color:#fff;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:7px;position:relative;padding:6px 0}
+nav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--cyan);border-radius:2px;transition:width .3s}
+nav a:hover::after,nav a.active::after{width:100%}
 nav a:hover,nav a.active{color:var(--cyan)}
 .ya-ico{width:17px;height:17px;border-radius:50%;background:var(--yandex);color:#fff;font-size:10px;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
 .header-right{margin-left:auto;display:flex;align-items:center;gap:14px}
 
+/* Бургер */
+.burger{display:none;width:46px;height:46px;border-radius:14px;background:#1B2A4A;position:relative;flex:none;transition:.3s}
+.burger span{position:absolute;left:13px;width:20px;height:2px;background:#fff;border-radius:2px;transition:.35s}
+.burger span:nth-child(1){top:16px}
+.burger span:nth-child(2){top:22px}
+.burger span:nth-child(3){top:28px}
+.burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:99;background:rgba(6,11,21,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:.4s}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu a{font-family:var(--font-head);font-size:30px;font-weight:800;text-transform:uppercase;padding:12px;opacity:0;transform:translateY(20px);transition:.45s}
+.mobile-menu.open a{opacity:1;transform:none}
+.mobile-menu a:nth-child(1){transition-delay:.05s}
+.mobile-menu a:nth-child(2){transition-delay:.1s}
+.mobile-menu a:nth-child(3){transition-delay:.15s}
+.mobile-menu a:nth-child(4){transition-delay:.2s}
+.mobile-menu a:nth-child(5){transition-delay:.25s}
+.mobile-menu a:nth-child(6){transition-delay:.3s}
+.mobile-menu a:hover{color:var(--cyan)}
+.mm-socials{display:flex;gap:14px;margin-top:26px}
+.mm-phone{margin-top:18px;color:var(--cyan);font-weight:800;font-size:20px}
+
+/* ===== Hero ===== */
 .hero{min-height:100vh;padding:150px 0 70px;display:flex;flex-direction:column;align-items:center}
 .hero::before{content:'';position:absolute;left:50%;top:58%;width:920px;height:620px;
   transform:translate(-50%,-50%);pointer-events:none;filter:blur(12px);
@@ -100,13 +173,19 @@ nav a:hover,nav a.active{color:var(--cyan)}
 .soc{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.3s;flex:none}
 .soc:hover{transform:scale(1.12)}
 .soc svg{width:26px;height:26px;fill:#fff}
+.soc svg.vk{width:30px;height:30px}
 .soc.tg{background:var(--tg)} .soc.wa{background:var(--wa)}
 .ask-card .master{position:absolute;right:10px;bottom:0;height:190px;width:auto;max-width:54%;object-fit:contain;object-position:bottom right}
 .hero-sub{margin-top:56px;font-size:24px;font-weight:800;line-height:1.15;text-transform:uppercase;font-family:var(--font-head)}
 .hero-sub + .btn{margin-top:28px;width:100%}
+.hero-hours{display:inline-flex;align-items:center;gap:9px;margin-top:20px;color:#5E739B;font-size:14px;font-weight:600}
+.hero-hours .dot{width:8px;height:8px;border-radius:50%;background:#3ADC7C;box-shadow:0 0 12px #3ADC7C}
 .hero-reels{position:absolute;right:40px;top:110px;width:305px;display:flex;flex-direction:column;gap:26px;z-index:4}
 .vcard{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:9/15;background:#12203A;cursor:pointer}
-.vcard video{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.6,.2,1);filter:brightness(.92)}
+.vcard video,.vcard img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.92)}
+.vcard video{opacity:0;transition:opacity .5s,transform .7s cubic-bezier(.2,.6,.2,1)}
+.vcard.playing video{opacity:1}
+.vcard.playing img.poster{display:none}
 .vcard:hover video{transform:scale(1.07)}
 .play-btn{position:absolute;left:16px;bottom:16px;width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;transition:.35s;z-index:2}
 .play-btn svg{width:20px;height:20px;fill:#fff;margin-left:3px}
@@ -213,7 +292,10 @@ nav a:hover,nav a.active{color:var(--cyan)}
 .btn-white .tg-dot svg{width:14px;height:14px;fill:#fff}
 .tg-thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:64px}
 .tg-thumb{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:9/15;cursor:pointer;background:#12203A}
-.tg-thumb video{width:100%;height:100%;object-fit:cover;transition:transform .7s;filter:brightness(.9)}
+.tg-thumb video,.tg-thumb img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.9)}
+.tg-thumb video{opacity:0;transition:opacity .5s,transform .7s}
+.tg-thumb.playing video{opacity:1}
+.tg-thumb.playing img.poster{display:none}
 .tg-thumb:hover video{transform:scale(1.08)}
 .tg-thumb .play-btn{width:48px;height:48px;left:12px;bottom:12px}
 .tg-thumb .play-btn svg{width:16px;height:16px}
@@ -221,7 +303,10 @@ nav a:hover,nav a.active{color:var(--cyan)}
 
 .reels-row{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;padding-top:80px}
 .reel{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:9/16;background:#12203A;cursor:pointer}
-.reel video{width:100%;height:100%;object-fit:cover;filter:brightness(.88);transition:transform .8s cubic-bezier(.2,.6,.2,1)}
+.reel video,.reel img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.88)}
+.reel video{opacity:0;transition:opacity .5s,transform .8s cubic-bezier(.2,.6,.2,1)}
+.reel.playing video{opacity:1}
+.reel.playing img.poster{display:none}
 .reel:hover video{transform:scale(1.07)}
 .reel .play-btn{left:20px;bottom:20px}
 
@@ -243,7 +328,9 @@ nav a:hover,nav a.active{color:var(--cyan)}
 
 .map-head{text-align:center;max-width:900px;margin:0 auto 46px;position:relative}
 .map-head .lead{margin-top:16px;text-align:left}
-.map-btns{display:flex;gap:16px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+.map-hours{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:#14203A;border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:13px 24px;font-size:15px;font-weight:700}
+.map-hours .dot{width:9px;height:9px;border-radius:50%;background:#3ADC7C;box-shadow:0 0 14px #3ADC7C}
+.map-btns{display:flex;gap:16px;justify-content:center;margin-top:30px;flex-wrap:wrap}
 .btn-slate svg{width:20px;height:20px;fill:currentColor}
 .map-wrap{margin-top:70px;height:clamp(340px,36vw,560px);width:100%;overflow:hidden;border-radius:28px;border:1px solid rgba(255,255,255,.06)}
 .map-real{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(100%) invert(90%) contrast(90%)}
@@ -271,6 +358,11 @@ footer{padding:90px 0 30px}
 .footer-bottom .pol:hover{color:#fff}
 .made-on{display:flex;align-items:center;justify-content:center;gap:10px;margin:56px auto 0;width:max-content;background:#14203A;border-radius:14px;padding:12px 22px;color:var(--muted);font-size:14px}
 .made-on .t{width:24px;height:24px;border-radius:50%;background:#EDF2F7;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:10px;color:var(--navy)}
+
+/* Плавающая кнопка звонка (мобильные) */
+.call-fab{display:none;position:fixed;right:18px;bottom:18px;z-index:90;width:62px;height:62px;border-radius:50%;background:var(--cyan);box-shadow:0 12px 40px rgba(41,182,246,.55);align-items:center;justify-content:center;animation:pulse 2.4s infinite}
+.call-fab svg{width:26px;height:26px;fill:var(--ink)}
+@keyframes pulse{0%{box-shadow:0 12px 40px rgba(41,182,246,.55),0 0 0 0 rgba(41,182,246,.45)}70%{box-shadow:0 12px 40px rgba(41,182,246,.55),0 0 0 18px rgba(41,182,246,0)}100%{box-shadow:0 12px 40px rgba(41,182,246,.55),0 0 0 0 rgba(41,182,246,0)}}
 
 .lightbox{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:.4s}
 .lightbox.open{opacity:1;pointer-events:auto}
@@ -310,13 +402,14 @@ footer{padding:90px 0 30px}
   :root{--ask-radius:88px 28px 28px 28px}
   .container{padding:0 20px}
   nav{display:none}
+  .burger{display:block}
   .header-in{padding:12px 16px;gap:14px}
   .logo{width:42px;height:42px}
   .btn-cyan{padding:13px 18px;font-size:11px}
   .btn-icon{width:38px;height:38px}
   .btn-icon svg.vk{width:20px;height:20px}
   .h1{font-size:clamp(38px,11vw,64px)}
-  .hero{padding:120px 0 50px;min-height:auto}
+  .hero{padding:120px 0 90px;min-height:auto}
   .hero-car{width:94vw}
   .hero-sub{font-size:19px}
   .ask-card{padding:48px 24px 24px 30px}
@@ -351,17 +444,21 @@ footer{padding:90px 0 30px}
   .map-btns .btn{width:100%;max-width:340px}
   .map-wrap{border-radius:18px;margin-top:44px}
   .hero::before{width:100vw;height:400px}
+  .call-fab{display:flex}
+  body{padding-bottom:70px}
 }
 </style>
 </head>
 <body>
 
+<a class="skip-link" href="#uslugi">Перейти к содержимому</a>
+
 <header id="header">
   <div class="header-in">
-    <a href="#hero" class="logo" aria-label="TD Detailing">
-      <svg viewBox="0 0 48 48" width="52" height="52"><rect width="48" height="48" rx="13" fill="#EDF2F7"/><path fill="#0D1B3E" fill-rule="evenodd" d="M8 16h13v5.6h-3.9V38h-5.2V21.6H8zM23 16h7.2c6.3 0 9.8 4.4 9.8 11s-3.5 11-9.8 11H23zm5.2 5v12h2c3.1 0 4.8-2.2 4.8-6s-1.7-6-4.8-6z"/><path fill="#29B6F6" d="M39.5 5c.8 3.2 1.8 4.2 5 5-3.2.8-4.2 1.8-5 5-.8-3.2-1.8-4.2-5-5 3.2-.8 4.2-1.8 5-5z"/></svg>
+    <a href="#hero" class="logo" aria-label="TD Detailing — на главную">
+      <svg viewBox="0 0 48 48" width="52" height="52" role="img" aria-hidden="true"><rect width="48" height="48" rx="13" fill="#EDF2F7"/><path fill="#0D1B3E" fill-rule="evenodd" d="M8 16h13v5.6h-3.9V38h-5.2V21.6H8zM23 16h7.2c6.3 0 9.8 4.4 9.8 11s-3.5 11-9.8 11H23zm5.2 5v12h2c3.1 0 4.8-2.2 4.8-6s-1.7-6-4.8-6z"/><path fill="#29B6F6" d="M39.5 5c.8 3.2 1.8 4.2 5 5-3.2.8-4.2 1.8-5 5-.8-3.2-1.8-4.2-5-5 3.2-.8 4.2-1.8 5-5z"/></svg>
     </a>
-    <nav>
+    <nav aria-label="Основная навигация">
       <a href="#hero" class="active">Главная</a>
       <a href="#uslugi">Услуги</a>
       <a href="#raboty">Работы</a>
@@ -369,41 +466,60 @@ footer{padding:90px 0 30px}
       <a href="#filialy">Филиалы</a>
     </nav>
     <div class="header-right">
-      <a class="btn-icon" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.9.3-.5.2-.8.4-1.1.7-.3.3-.6.7-.7 1.1-.1.4-.3.8-.3 1.9-.1 1.2-.1 1.6-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.9.2.5.4.8.7 1.1.3.3.7.6 1.1.7.4.1.8.3 1.9.3 1.2.1 1.6.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.9-.3.5-.2.8-.4 1.1-.7.3-.3.6-.7.7-1.1.1-.4.3-.8.3-1.9.1-1.2.1-1.6.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.7-.6-1.1-.7-.4-.1-.8-.3-1.9-.3-1.2-.1-1.6-.1-4.8-.1zm0 3.1a5 5 0 110 10 5 5 0 010-10zm0 1.8a3.2 3.2 0 100 6.4 3.2 3.2 0 000-6.4zm5.2-3.1a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg></a>
-      <a class="btn-icon" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
-      <a class="btn-icon" href="#" aria-label="ВКонтакте"><svg class="vk" viewBox="0 0 24 24"><path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974h-3.255c-.492 0-.787.16-.787.516 0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.376 2.708z"/></svg></a>
+      <a class="btn-icon" href="#" aria-label="Мы в Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.9.3-.5.2-.8.4-1.1.7-.3.3-.6.7-.7 1.1-.1.4-.3.8-.3 1.9-.1 1.2-.1 1.6-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.9.2.5.4.8.7 1.1.3.3.7.6 1.1.7.4.1.8.3 1.9.3 1.2.1 1.6.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.9-.3.5-.2.8-.4 1.1-.7.3-.3.6-.7.7-1.1.1-.4.3-.8.3-1.9.1-1.2.1-1.6.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.9-.2-.5-.4-.8-.7-1.1-.3-.3-.7-.6-1.1-.7-.4-.1-.8-.3-1.9-.3-1.2-.1-1.6-.1-4.8-.1zm0 3.1a5 5 0 110 10 5 5 0 010-10zm0 1.8a3.2 3.2 0 100 6.4 3.2 3.2 0 000-6.4zm5.2-3.1a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg></a>
+      <a class="btn-icon" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Мы в Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
+      <a class="btn-icon" href="#" aria-label="Мы во ВКонтакте"><svg class="vk" viewBox="0 0 24 24"><path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974h-3.255c-.492 0-.787.16-.787.516 0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.376 2.708z"/></svg></a>
       <a href="#cta" class="btn btn-cyan">Записаться на детейлинг</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#hero">Главная</a>
+  <a href="#uslugi">Услуги</a>
+  <a href="#raboty">Работы</a>
+  <a href="#otzyvy">Отзывы</a>
+  <a href="#filialy">Филиалы</a>
+  <a href="#cta">Записаться</a>
+  <div class="mm-socials">
+    <a class="btn-icon" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.9a5 5 0 110 10 5 5 0 010-10zm5.2-3.1a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg></a>
+    <a class="btn-icon" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
+    <a class="btn-icon" href="#" aria-label="ВКонтакте"><svg class="vk" viewBox="0 0 24 24"><path d="M13.162 18.994c.609 0 .858-.406.851-.915-.031-1.917.714-2.949 2.059-1.604 1.488 1.488 1.796 2.519 3.603 2.519h3.2c.808 0 1.126-.26 1.126-.668 0-.863-1.421-2.386-2.625-3.504-1.686-1.565-1.765-1.602-.313-3.486 1.801-2.339 4.157-5.336 2.073-5.336h-3.981c-.772 0-.828.435-1.103 1.083-.995 2.347-2.886 5.387-3.604 4.922-.751-.485-.407-2.406-.35-5.261.015-.754.011-1.271-1.141-1.539-.629-.145-1.241-.205-1.809-.205-2.273 0-3.841.953-2.95 1.119 1.571.293 1.42 3.692 1.054 5.16-.638 2.556-3.036-2.024-4.035-4.305-.241-.548-.315-.974-1.175-.974h-3.255c-.492 0-.787.16-.787.516 0 .602 2.96 6.72 5.786 9.77 2.756 2.975 5.48 2.708 7.376 2.708z"/></svg></a>
+  </div>
+  <a class="mm-phone" href="tel:+79504941122">+7 (950) 494-11-22</a>
+</div>
 
 <main>
 <section class="hero" id="hero">
   <h1 class="h1" data-reveal>Студия детейлинга
     <em>в Тюмени</em>
   </h1>
-  <img class="hero-car" src="img/hero-car.jpg" alt="Синий спорткар">
+  <img class="hero-car" src="img/hero-car.jpg" alt="Синий спорткар после детейлинга в студии TD">
 
   <div class="hero-left" data-reveal>
     <div class="ask-card">
       <h3>Задать<br>вопрос</h3>
       <p class="who">Кирилл,<br>старший мастер</p>
       <div class="socials">
-        <a class="soc tg" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
-        <a class="soc wa" href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.4 0 .1 0 .7-.3 1.8z"/></svg></a>
+        <a class="soc tg" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
+        <a class="soc wa" href="#" aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.4 0 .1 0 .7-.3 1.8z"/></svg></a>
       </div>
-      <img class="master" src="img/master.png" alt="Кирилл — старший мастер">
+      <img class="master" src="img/master.png" alt="Кирилл — старший мастер студии TD Detailing">
     </div>
     <p class="hero-sub">Мы позаботимся<br>о вашем автомобиле</p>
+    <p class="hero-hours"><span class="dot" aria-hidden="true"></span>Ежедневно 9:00–21:00</p>
     <a href="#uslugi" class="btn btn-ghost">Выбрать услугу</a>
   </div>
 
   <div class="hero-reels">
     <div class="vcard js-play" data-video="video/Hero-Reel-1.mp4" data-reveal>
+      <img class="poster" src="img/poster-hero-1.jpg" alt="" aria-hidden="true" loading="lazy">
       <video src="video/Hero-Reel-1.mp4" muted loop playsinline preload="none"></video>
       <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
     </div>
     <div class="vcard js-play" data-video="video/Hero-Reel-2.mp4" data-reveal>
+      <img class="poster" src="img/poster-hero-2.jpg" alt="" aria-hidden="true" loading="lazy">
       <video src="video/Hero-Reel-2.mp4" muted loop playsinline preload="none"></video>
       <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
     </div>
@@ -422,35 +538,35 @@ footer{padding:90px 0 30px}
     <div class="services-grid">
 
       <article class="service-card" data-reveal style="--ar:1/1">
-        <div class="service-media"><img src="img/service-wax.jpg" alt="Нанесение твердого воска на кузов" loading="lazy"></div>
+        <div class="service-media"><img src="img/service-wax.jpg" alt="Нанесение твердого воска на кузов автомобиля" loading="lazy"></div>
         <h3 class="service-title">Твердый воск</h3>
         <div class="service-price"><span class="arr">↳</span> от 2 500 ₽</div>
         <p class="service-desc">Твердый воск обладает превосходным гидрофобным эффектом, придает кузову глубокий «мокрый» блеск и защищает лак до 2 месяцев.</p>
       </article>
 
       <article class="service-card" data-reveal style="--ar:1/1">
-        <div class="service-media"><img src="img/service-ceramic.jpg" alt="Нанесение керамического покрытия" loading="lazy"></div>
+        <div class="service-media"><img src="img/service-ceramic.jpg" alt="Нанесение керамического покрытия на кузов" loading="lazy"></div>
         <h3 class="service-title">Керамика</h3>
         <div class="service-price"><span class="arr">↳</span> от 10 000 ₽</div>
         <p class="service-desc">Наносим керамическое покрытие в 2–3 слоя: стойкий гидрофоб, защита от реагентов и УФ-лучей. Гарантия по договору — до 3 лет.</p>
       </article>
 
       <article class="service-card" data-reveal style="--ar:1/1">
-        <div class="service-media"><img src="img/service-antirain.jpg" alt="Нанесение антидождя на стекло" loading="lazy"></div>
+        <div class="service-media"><img src="img/service-antirain.jpg" alt="Нанесение антидождя на лобовое стекло" loading="lazy"></div>
         <h3 class="service-title">Антидождь</h3>
         <div class="service-price"><span class="arr">↳</span> от 2 000 ₽</div>
         <p class="service-desc">Эффективная защита от влаги и грязи: лобовое стекло остается чистым даже в ливень на скорости от 60 км/ч.</p>
       </article>
 
       <article class="service-card" data-reveal style="--ar:1/1">
-        <div class="service-media"><img src="img/service-polish.jpg" alt="Полировка кузова — глубокий глянец" loading="lazy"></div>
+        <div class="service-media"><img src="img/service-polish.jpg" alt="Полировка кузова до зеркального блеска" loading="lazy"></div>
         <h3 class="service-title">Полировка кузова</h3>
         <div class="service-price"><span class="arr">↳</span> от 12 000 ₽</div>
         <p class="service-desc">Убираем риски, голограммы и «паутинку». Восстанавливаем глубину цвета и зеркальный блеск лакокрасочного покрытия.</p>
       </article>
 
       <article class="service-card" data-reveal style="--ar:1/1">
-        <div class="service-media"><img src="img/service-interior.jpg" alt="Химчистка салона" loading="lazy"></div>
+        <div class="service-media"><img src="img/service-interior.jpg" alt="Химчистка салона автомобиля" loading="lazy"></div>
         <h3 class="service-title">Химчистка салона</h3>
         <div class="service-price"><span class="arr">↳</span> от 10 000 ₽</div>
         <p class="service-desc">Глубокая чистка кожи, алькантары и текстиля с реставрацией. Салон — как из автосалона: без запахов, пятен и разводов.</p>
@@ -478,18 +594,18 @@ footer{padding:90px 0 30px}
       <p class="lead">Каждый автомобиль уезжает с новым уровнем блеска</p>
     </div>
     <div class="masonry">
-      <figure class="work" style="--ar:3/4" data-reveal><img src="img/portfolio-1.jpg" alt="BMW" loading="lazy"></figure>
-      <figure class="work" style="--ar:4/5" data-reveal><img src="img/portfolio-2.jpg" alt="Mustang" loading="lazy"></figure>
-      <figure class="work" style="--ar:1/1" data-reveal><img src="img/portfolio-3.jpg" alt="Nissan GT-R" loading="lazy"></figure>
-      <figure class="work" style="--ar:3/4" data-reveal><img src="img/portfolio-4.jpg" alt="Range Rover" loading="lazy"></figure>
-      <figure class="work" style="--ar:4/3" data-reveal><img src="img/portfolio-5.jpg" alt="Camaro" loading="lazy"></figure>
-      <figure class="work" style="--ar:4/5" data-reveal><img src="img/portfolio-6.jpg" alt="Mustang GT" loading="lazy"></figure>
-      <figure class="work" style="--ar:3/4" data-reveal><img src="img/portfolio-7.jpg" alt="BMW" loading="lazy"></figure>
-      <figure class="work" style="--ar:1/1" data-reveal><img src="img/portfolio-8.jpg" alt="BMW M4" loading="lazy"></figure>
-      <figure class="work" style="--ar:4/3" data-reveal><img src="img/portfolio-9.jpg" alt="Mazda MX-5" loading="lazy"></figure>
-      <figure class="work" style="--ar:3/4" data-reveal><img src="img/portfolio-10.jpg" alt="Porsche" loading="lazy"></figure>
-      <figure class="work" style="--ar:4/5" data-reveal><img src="img/portfolio-11.jpg" alt="Mercedes-AMG" loading="lazy"></figure>
-      <figure class="work" style="--ar:1/1" data-reveal><img src="img/portfolio-12.jpg" alt="Porsche 911" loading="lazy"></figure>
+      <figure class="work" style="--ar:3/4" data-reveal><img src="img/portfolio-1.jpg" alt="BMW после детейлинга в студии TD" loading="lazy"></figure>
+      <figure class="work" style="--ar:4/5" data-reveal><img src="img/portfolio-2.jpg" alt="Mustang после детейлинга" loading="lazy"></figure>
+      <figure class="work" style="--ar:1/1" data-reveal><img src="img/portfolio-3.jpg" alt="Nissan GT-R после полировки" loading="lazy"></figure>
+      <figure class="work" style="--ar:3/4" data-reveal><img src="img/portfolio-4.jpg" alt="Range Rover после керамики" loading="lazy"></figure>
+      <figure class="work" style="--ar:4/3" data-reveal><img src="img/portfolio-5.jpg" alt="Camaro после детейлинга" loading="lazy"></figure>
+      <figure class="work" style="--ar:4/5" data-reveal><img src="img/portfolio-6.jpg" alt="Mustang GT после детейлинга" loading="lazy"></figure>
+      <figure class="work" style="--ar:3/4" data-reveal><img src="img/portfolio-7.jpg" alt="BMW после химчистки салона" loading="lazy"></figure>
+      <figure class="work" style="--ar:1/1" data-reveal><img src="img/portfolio-8.jpg" alt="BMW M4 после детейлинга" loading="lazy"></figure>
+      <figure class="work" style="--ar:4/3" data-reveal><img src="img/portfolio-9.jpg" alt="Mazda MX-5 после полировки" loading="lazy"></figure>
+      <figure class="work" style="--ar:3/4" data-reveal><img src="img/portfolio-10.jpg" alt="Porsche после детейлинга" loading="lazy"></figure>
+      <figure class="work" style="--ar:4/5" data-reveal><img src="img/portfolio-11.jpg" alt="Mercedes-AMG после детейлинга" loading="lazy"></figure>
+      <figure class="work" style="--ar:1/1" data-reveal><img src="img/portfolio-12.jpg" alt="Porsche 911 после детейлинга" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -497,24 +613,24 @@ footer{padding:90px 0 30px}
 <section class="full-section" id="calc" style="padding-top:70px">
   <div class="full-panel">
     <div class="ask-card--photo" data-reveal>
-      <img class="ask-photo" src="img/master.png" alt="Кирилл — старший мастер">
+      <img class="ask-photo" src="img/master.png" alt="Кирилл — старший мастер студии TD Detailing">
       <div class="ask-content">
         <h3>Задать<br>вопрос</h3>
         <p class="who">Кирилл,<br>старший мастер</p>
         <div class="socials">
-          <a class="soc tg" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
-          <a class="soc wa" href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.4 0 .1 0 .7-.3 1.8z"/></svg></a>
+          <a class="soc tg" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
+          <a class="soc wa" href="#" aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.4 0 .1 0 .7-.3 1.8z"/></svg></a>
         </div>
       </div>
     </div>
 
     <form class="calc-form js-form" data-reveal>
-      <h2 class="h2 grad">Рассчитать стоимость</h2>
-      <p class="lead">Оставьте контакты, и мы <b>перезвоним в течение 30 минут</b></p>
-      <input class="input" type="text" placeholder="Имя" required>
+      <h2 class="h2 grad">Расчёт стоимости</h2>
+      <p class="lead">Оставьте контакты, и мы <b>перезвоним в течение 30 минут</b> (ежедневно 9:00–21:00)</p>
+      <input class="input" type="text" name="name" placeholder="Имя" autocomplete="name" required>
       <div class="phone-field">
-        <span class="flag">🇷🇺</span><span class="caret">▾</span>
-        <input type="tel" placeholder="+7 (000) 000-00-00" required>
+        <span class="flag" aria-hidden="true">🇷🇺</span><span class="caret" aria-hidden="true">▾</span>
+        <input class="js-phone" type="tel" name="phone" placeholder="+7 (000) 000-00-00" autocomplete="tel" inputmode="tel" required>
       </div>
       <label class="agree">
         <input type="checkbox" required><span class="box"></span>
@@ -523,7 +639,7 @@ footer{padding:90px 0 30px}
       <button type="submit" class="btn btn-cyan">Отправить заявку</button>
     </form>
 
-    <img class="calc-img" src="img/calc-wheel.png" alt="Диск автомобиля" loading="lazy">
+    <img class="calc-img" src="img/calc-wheel.png" alt="Диск автомобиля после детейлинга" loading="lazy">
   </div>
 </section>
 
@@ -534,14 +650,14 @@ footer{padding:90px 0 30px}
       <h2 class="h2 grad" style="text-align:left">Актуальная оценка<br>
         <span class="rating-row">4.1 <span class="stars">★★★★<span class="star-empty">★</span></span> на
         <svg class="ya-pin" viewBox="0 0 24 24"><path fill="#FC3F1D" d="M12 2a7 7 0 00-7 7c0 4.9 7 13 7 13s7-8.1 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>
-        Яндекс.Карты</span>
+        Яндекс.Картах</span>
       </h2>
-      <p class="lead" style="margin-top:20px">4.1 на Яндекс.Картах — это не просто цифра. Это подтверждение, что к нам приезжают тачки разного уровня, и каждая уезжает максимально ухоженной. <b>Мы не обещаем — мы показываем результат.</b> Ниже отзывы тех, кто уже проверил нас на деле.</p>
+      <p class="lead" style="margin-top:20px">4.1 на Яндекс.Картах — это не просто цифра. Это подтверждение, что к нам приезжают автомобили разного уровня, и каждый уезжает максимально ухоженным. <b>Мы не обещаем — мы показываем результат.</b> Ниже отзывы тех, кто уже проверил нас на деле.</p>
     </div>
 
     <div class="review-actions" data-reveal>
-      <button class="btn btn-slate"><svg viewBox="0 0 24 24"><path d="M4 4h7v2H6v5H4V4zm9 0h7v7h-2V6h-5V4zM4 13h2v5h5v2H4v-7zm14 0h2v7h-7v-2h5v-5z"/></svg>Написать отзыв</button>
-      <button class="btn btn-slate"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 4.9 7 13 7 13s7-8.1 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg>Все отзывы</button>
+      <a class="btn btn-slate" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4 4h7v2H6v5H4V4zm9 0h7v7h-2V6h-5V4zM4 13h2v5h5v2H4v-7zm14 0h2v7h-7v-2h5v-5z"/></svg>Написать отзыв</a>
+      <a class="btn btn-slate" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 4.9 7 13 7 13s7-8.1 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg>Все отзывы</a>
     </div>
 
     <div class="reviews-grid" data-reveal>
@@ -549,13 +665,13 @@ footer{padding:90px 0 30px}
         <svg class="scan" viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/><circle cx="12" cy="12" r="3.4"/></svg>
         <h3>Азамат</h3>
         <p>Отдал им свою BMW на мойку и твердый воск. Помыли прям хорошо — без разводов, кузов скользкий, вода скатывается. Забрал в тот же день, как и договаривались. Машине приятно, мне тоже. Рекомендую.</p>
-        <div class="review-photos"><img src="img/review-photo-1.jpg" alt="BMW после детейлинга — отзыв Азамата" loading="lazy"></div>
+        <div class="review-photos"><img src="img/review-photo-1.jpg" alt="BMW после мойки и воска — отзыв Азамата" loading="lazy"></div>
       </article>
       <article class="review">
         <svg class="scan" viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/><circle cx="12" cy="12" r="3.4"/></svg>
         <h3>Дмитрий</h3>
         <p>Обслуживался у ребят по нескольким позициям: оклейка оптики, химчистка салона и полировка кузова. Все сделали качественно и в срок, по каждой работе объяснили, что и зачем. Фары как новые, салон чистый, кузов блестит. Буду обращаться еще.</p>
-        <div class="review-photos"><img src="img/review-photo-2.jpg" alt="Работы TD Detailing — отзыв Дмитрия" loading="lazy"></div>
+        <div class="review-photos"><img src="img/review-photo-2.jpg" alt="Оклейка оптики, химчистка и полировка — отзыв Дмитрия" loading="lazy"></div>
       </article>
     </div>
   </div>
@@ -582,44 +698,50 @@ footer{padding:90px 0 30px}
       </div>
 
       <div class="tg-text" data-reveal>
-        <h2 class="h2"><span class="num">500.000</span> человек ежемесячно смотрят наш контент про уход за автомобилем</h2>
-        <p class="lead">Каждый день мы делимся советами, фишками и реальными кейсами из детейлинга. Люди приходят за практикой, а остаются — потому что видят результат. <b>Присоединяйтесь к нам в телеграмм!</b></p>
+        <h2 class="h2"><span class="num">500 000</span> человек ежемесячно смотрят наш контент про уход за автомобилем</h2>
+        <p class="lead">Каждый день мы делимся советами, фишками и реальными кейсами из детейлинга. Люди приходят за практикой, а остаются — потому что видят результат. <b>Присоединяйтесь к нам в Telegram!</b></p>
         <a href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" class="btn btn-white"><span class="tg-dot"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></span>Подписаться</a>
       </div>
     </div>
 
     <div class="tg-thumbs">
       <div class="tg-thumb js-play" data-video="video/Tg-Thumb-1.mp4" data-reveal>
+        <img class="poster" src="img/poster-tg-1.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Tg-Thumb-1.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <svg class="pin-ico" viewBox="0 0 24 24"><path d="M16 3l5 5-2 2-.7-.7-3.3 3.3.7 3.4-1.4 1.4-3-3L7 19l-.7-.7L10 14l-3-3L8.4 9.6l3.4.7L15.1 7l-.7-.7z"/></svg>
         <span class="views"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 100 8 4 4 0 000-8z"/></svg>5.8 МЛН</span>
       </div>
       <div class="tg-thumb js-play" data-video="video/Tg-Thumb-2.mp4" data-reveal>
+        <img class="poster" src="img/poster-tg-2.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Tg-Thumb-2.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <svg class="pin-ico" viewBox="0 0 24 24"><path d="M16 3l5 5-2 2-.7-.7-3.3 3.3.7 3.4-1.4 1.4-3-3L7 19l-.7-.7L10 14l-3-3L8.4 9.6l3.4.7L15.1 7l-.7-.7z"/></svg>
         <span class="views"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 100 8 4 4 0 000-8z"/></svg>249 ТЫС</span>
       </div>
       <div class="tg-thumb js-play" data-video="video/Tg-Thumb-3.mp4" data-reveal>
+        <img class="poster" src="img/poster-tg-3.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Tg-Thumb-3.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <svg class="pin-ico" viewBox="0 0 24 24"><path d="M16 3l5 5-2 2-.7-.7-3.3 3.3.7 3.4-1.4 1.4-3-3L7 19l-.7-.7L10 14l-3-3L8.4 9.6l3.4.7L15.1 7l-.7-.7z"/></svg>
         <span class="views"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 100 8 4 4 0 000-8z"/></svg>210 ТЫС</span>
       </div>
       <div class="tg-thumb js-play" data-video="video/Tg-Thumb-4.mp4" data-reveal>
+        <img class="poster" src="img/poster-tg-4.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Tg-Thumb-4.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <svg class="pin-ico" viewBox="0 0 24 24"><path d="M16 3l5 5-2 2-.7-.7-3.3 3.3.7 3.4-1.4 1.4-3-3L7 19l-.7-.7L10 14l-3-3L8.4 9.6l3.4.7L15.1 7l-.7-.7z"/></svg>
         <span class="views"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 100 8 4 4 0 000-8z"/></svg>135 ТЫС</span>
       </div>
       <div class="tg-thumb js-play" data-video="video/Tg-Thumb-5.mp4" data-reveal>
+        <img class="poster" src="img/poster-tg-5.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Tg-Thumb-5.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <svg class="pin-ico" viewBox="0 0 24 24"><path d="M16 3l5 5-2 2-.7-.7-3.3 3.3.7 3.4-1.4 1.4-3-3L7 19l-.7-.7L10 14l-3-3L8.4 9.6l3.4.7L15.1 7l-.7-.7z"/></svg>
         <span class="views"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 100 8 4 4 0 000-8z"/></svg>98,8 ТЫС</span>
       </div>
       <div class="tg-thumb js-play" data-video="video/Tg-Thumb-6.mp4" data-reveal>
+        <img class="poster" src="img/poster-tg-6.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Tg-Thumb-6.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <svg class="pin-ico" viewBox="0 0 24 24"><path d="M16 3l5 5-2 2-.7-.7-3.3 3.3.7 3.4-1.4 1.4-3-3L7 19l-.7-.7L10 14l-3-3L8.4 9.6l3.4.7L15.1 7l-.7-.7z"/></svg>
@@ -633,26 +755,31 @@ footer{padding:90px 0 30px}
   <div class="container">
     <div class="reels-row">
       <div class="reel js-play" data-video="video/Reel-1.mp4" data-reveal>
+        <img class="poster" src="img/poster-reel-1.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Reel-1.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <span class="views"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 100 8 4 4 0 000-8z"/></svg>249K</span>
       </div>
       <div class="reel js-play" data-video="video/Reel-2.mp4" data-reveal>
+        <img class="poster" src="img/poster-reel-2.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Reel-2.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <span class="views"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 100 8 4 4 0 000-8z"/></svg>52K</span>
       </div>
       <div class="reel js-play" data-video="video/Reel-3.mp4" data-reveal>
+        <img class="poster" src="img/poster-reel-3.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Reel-3.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <span class="views"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 100 8 4 4 0 000-8z"/></svg>98.9K</span>
       </div>
       <div class="reel js-play" data-video="video/Reel-4.mp4" data-reveal>
+        <img class="poster" src="img/poster-reel-4.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Reel-4.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <span class="views"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 100 8 4 4 0 000-8z"/></svg>98.8K</span>
       </div>
       <div class="reel js-play" data-video="video/Reel-5.mp4" data-reveal>
+        <img class="poster" src="img/poster-reel-5.jpg" alt="" aria-hidden="true" loading="lazy">
         <video src="video/Reel-5.mp4" muted loop playsinline preload="none"></video>
         <span class="play-btn"><svg viewBox="0 0 24 24"><path d="M6 3.7v16.6L20 12z"/></svg></span>
         <span class="views"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 100 8 4 4 0 000-8z"/></svg>135K</span>
@@ -664,12 +791,12 @@ footer{padding:90px 0 30px}
 <section id="cta">
   <div class="full-panel cta">
     <div class="ask-card--photo" data-reveal>
-      <img class="ask-photo" src="img/cta-card.jpg" alt="Автомобиль TD Detailing">
+      <img class="ask-photo" src="img/cta-card.jpg" alt="Автомобиль студии TD Detailing">
       <div class="ask-content">
         <h3>Задать<br>вопрос</h3>
         <div class="socials">
-          <a class="soc tg" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
-          <a class="soc wa" href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.4 0 .1 0 .7-.3 1.8z"/></svg></a>
+          <a class="soc tg" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.4 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2L7.7 13.3l-4.4-1.4c-1-.3-1-1 .2-1.4L20.5 3c.8-.3 1.6.2 1.4 1.4z"/></svg></a>
+          <a class="soc wa" href="#" aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.5 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.7-4.4-3.9-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.4 0 .1 0 .7-.3 1.8z"/></svg></a>
         </div>
       </div>
     </div>
@@ -678,10 +805,10 @@ footer{padding:90px 0 30px}
       <h2>Свяжитесь с нами напрямую</h2>
       <p class="note"><b>Оставьте свой номер</b> — и наш специалист свяжется с вами в ближайшее время. Мы подробно расскажем о наших услугах, ответим на любые вопросы и подберём оптимальное решение именно для вашего автомобиля.</p>
       <form class="cta-form js-form">
-        <input class="input" type="text" placeholder="Имя" required>
+        <input class="input" type="text" name="name" placeholder="Имя" autocomplete="name" required>
         <div class="phone-field">
-          <span class="flag">🇷🇺</span><span class="caret">▾</span>
-          <input type="tel" placeholder="+7 (000) 000-00-00" required>
+          <span class="flag" aria-hidden="true">🇷🇺</span><span class="caret" aria-hidden="true">▾</span>
+          <input class="js-phone" type="tel" name="phone" placeholder="+7 (000) 000-00-00" autocomplete="tel" inputmode="tel" required>
         </div>
         <label class="agree">
           <input type="checkbox" required><span class="box"></span>
@@ -691,7 +818,7 @@ footer{padding:90px 0 30px}
       </form>
     </div>
 
-    <img class="cta-img" src="img/cta-bg.jpg" alt="Спорткар" loading="lazy">
+    <img class="cta-img" src="img/cta-bg.jpg" alt="Спорткар с антикрылом" loading="lazy">
   </div>
 </section>
 
@@ -701,6 +828,7 @@ footer{padding:90px 0 30px}
     <div class="map-head" data-reveal>
       <h2 class="h2 grad">Мы находимся по адресу:<br><span style="color:var(--cyan);-webkit-text-fill-color:var(--cyan)">Тюмень, ул. Ветеранов Труда, 21, стр. 2</span></h2>
       <p class="lead"><b>Приезжайте лично</b> — студия TD всегда открыта для ваших автомобилей. У нас удобный заезд и парковка, чтобы вам было максимально комфортно.</p>
+      <p class="map-hours"><span class="dot" aria-hidden="true"></span>Ежедневно с 9:00 до 21:00</p>
       <div class="map-btns">
         <a class="btn btn-slate" href="https://yandex.ru/maps/?text=%D0%A2%D1%8E%D0%BC%D0%B5%D0%BD%D1%8C%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%92%D0%B5%D1%82%D0%B5%D1%80%D0%B0%D0%BD%D0%BE%D0%B2%20%D0%A2%D1%80%D1%83%D0%B4%D0%B0%2C%2021%2C%20%D1%81%D1%82%D1%80.%202" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 4.9 7 13 7 13s7-8.1 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg>Открыть на картах</a>
         <a class="btn btn-slate" href="https://yandex.ru/maps/?text=%D0%A2%D1%8E%D0%BC%D0%B5%D0%BD%D1%8C%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%92%D0%B5%D1%82%D0%B5%D1%80%D0%B0%D0%BD%D0%BE%D0%B2%20%D0%A2%D1%80%D1%83%D0%B4%D0%B0%2C%2021%2C%20%D1%81%D1%82%D1%80.%202&mode=routes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 100-8 4 4 0 000 8zm0 2c-3.3 0-7 1.7-7 5v3h14v-3c0-3.3-3.7-5-7-5zm9.5-3a3 3 0 100-6 3 3 0 000 6zm.5 2c-1 0-2 .2-2.9.7 1.5 1.1 2.4 2.7 2.4 4.8V21H24v-2.5c0-2.5-2.7-4.5-5-4.5z"/></svg>Проложить маршрут</a>
@@ -708,7 +836,7 @@ footer{padding:90px 0 30px}
     </div>
   </div>
   <div class="map-wrap" data-reveal>
-    <img class="map-real" src="img/map.jpg" alt="Карта проезда">
+    <img class="map-real" src="img/map.jpg" alt="Карта проезда: Тюмень, ул. Ветеранов Труда, 21, стр. 2 — ТудДетейлинг">
   </div>
 </section>
 
@@ -716,7 +844,7 @@ footer{padding:90px 0 30px}
   <div class="container">
     <div class="footer-grid">
       <div>
-        <p class="f-label">Звоните, мы на связи</p>
+        <p class="f-label">Звоните, мы на связи (9:00–21:00)</p>
         <a class="f-big" href="tel:+79504941122">+7 (950) 494-11-22</a>
         <p class="f-label">Наш Telegram-канал</p>
         <a class="f-big" href="https://t.me/Detailing_tmn" target="_blank" rel="noopener">@Detailing_tmn</a>
@@ -725,7 +853,7 @@ footer{padding:90px 0 30px}
         <p class="f-label">навигация по сайту</p>
         <a href="#raboty">Работы</a>
         <a href="#uslugi">Услуги</a>
-        <a href="#calc">Рассчет стоимости</a>
+        <a href="#calc">Расчёт стоимости</a>
         <a href="#otzyvy">Отзывы</a>
         <a href="#community">Комьюнити</a>
         <a href="#filialy">Мы на карте</a>
@@ -750,7 +878,7 @@ footer{padding:90px 0 30px}
     </div>
 
     <div class="footer-bottom">
-      <div>ИП ФАМИЛИЯ ИМЯ ОТЧЕСТВО<br>ИНН: 000000000000<br>ОГРНИП: 000000000000000</div>
+      <div>TD Detailing — студия детейлинга, Тюмень</div>
       <a class="pol" href="#">Политика конфиденциальности</a>
       <div>Разработка сайта – <b>Nikita Marcinkiewicz</b></div>
     </div>
@@ -759,6 +887,11 @@ footer{padding:90px 0 30px}
   </div>
 </footer>
 </main>
+
+<!-- Плавающая кнопка звонка (мобильные) -->
+<a class="call-fab" href="tel:+79504941122" aria-label="Позвонить в студию">
+  <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+</a>
 
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
@@ -771,9 +904,27 @@ footer{padding:90px 0 30px}
 
 <script>
 'use strict';
+
+/* ===== Шапка при скролле ===== */
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40), {passive:true});
 
+/* ===== Бургер-меню (мобильные) ===== */
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+function toggleMenu(force){
+  const open = force !== undefined ? force : !mobileMenu.classList.contains('open');
+  mobileMenu.classList.toggle('open', open);
+  burger.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open);
+  mobileMenu.setAttribute('aria-hidden', !open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+burger.addEventListener('click', ()=> toggleMenu());
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> toggleMenu(false)));
+window.addEventListener('keydown', e=>{ if(e.key==='Escape' && mobileMenu.classList.contains('open')) toggleMenu(false); });
+
+/* ===== Видео-лайтбокс ===== */
 const lightbox = document.getElementById('lightbox');
 const lbVideo  = document.getElementById('lightboxVideo');
 function openVideo(src){
@@ -796,6 +947,26 @@ document.getElementById('lightboxClose').addEventListener('click', closeVideo);
 document.getElementById('lightboxBackdrop').addEventListener('click', closeVideo);
 document.addEventListener('keydown', e=>{ if(e.key==='Escape' && lightbox.classList.contains('open')) closeVideo(); });
 
+/* ===== Маска телефона +7 (___) ___-__-__ ===== */
+document.querySelectorAll('.js-phone').forEach(inp=>{
+  inp.addEventListener('input', ()=>{
+    const d = inp.value.replace(/\D/g,'');
+    let v = '';
+    if(!d.length){ inp.value=''; return; }
+    let digits = d[0]==='8' ? '7'+d.slice(1) : d;
+    if(digits[0]!=='7') digits = '7'+digits;
+    digits = digits.slice(0,11);
+    v = '+7';
+    if(digits.length>1) v += ' ('+digits.slice(1,4);
+    if(digits.length>=4) v += ')';
+    if(digits.length>4) v += ' '+digits.slice(4,7);
+    if(digits.length>7) v += '-'+digits.slice(7,9);
+    if(digits.length>9) v += '-'+digits.slice(9,11);
+    inp.value = v;
+  });
+});
+
+/* ===== Формы: имитация отправки (заготовка под Telegram Bot API) ===== */
 document.querySelectorAll('.js-form').forEach(form=>{
   form.addEventListener('submit', e=>{
     e.preventDefault();
@@ -807,15 +978,17 @@ document.querySelectorAll('.js-form').forEach(form=>{
   });
 });
 
+/* ===== Появление с блюром ===== */
 const io = new IntersectionObserver(entries=>{
   entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('revealed'); io.unobserve(en.target); } });
 },{threshold:.12});
 document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
 
+/* ===== Умные видео: постер → play в кадре ===== */
 const vObs = new IntersectionObserver(entries=>{
   entries.forEach(en=>{
     const v = en.target;
-    if(en.isIntersecting){ v.play().catch(()=>{}); }
+    if(en.isIntersecting){ v.play().catch(()=>{}); v.closest('.js-play, .phone')?.classList.add('playing'); }
     else { v.pause(); }
   });
 },{threshold:.25});
@@ -825,6 +998,21 @@ document.querySelectorAll('.vcard video, .tg-thumb video, .reel video, .ph-video
   vObs.observe(v);
 });
 
+/* ===== Scrollspy: активный пункт меню при скролле ===== */
+const sections = ['hero','uslugi','raboty','otzyvy','filialy'].map(id=>document.getElementById(id));
+const navLinks = document.querySelectorAll('header nav a');
+const spy = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){
+      navLinks.forEach(a=>{
+        a.classList.toggle('active', a.getAttribute('href') === '#'+en.target.id);
+      });
+    }
+  });
+},{rootMargin:'-40% 0px -55% 0px'});
+sections.forEach(s=>{ if(s) spy.observe(s); });
+
+/* ===== Анти-кража ===== */
 const WARN = '⚠ Контент защищён авторскими правами.\n© TD Detailing — студия детейлинга';
 document.addEventListener('contextmenu', e=>{ e.preventDefault(); alert(WARN); });
 document.addEventListener('keydown', e=>{
